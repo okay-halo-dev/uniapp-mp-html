@@ -28,7 +28,7 @@
     background-color: rgba(3, 174, 252, 0.075);
 }
 
-.card-error {
+.halo-douban-card-error {
     box-sizing: border-box;
     padding: 50rpx 24rpx;
     font-size: 24rpx;

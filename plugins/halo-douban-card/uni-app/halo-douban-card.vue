@@ -37,17 +37,13 @@
 <script>
 
 export default {
-  name: 'HaloDoubanCard',
+  name: 'HaloDouBanCard',
   props: {
     mode: {
       type: Boolean,
       default: false
     },
-    url: String,
-    article: {
-      type: Object,
-      default: () => ({})
-    }
+    url: String
   },
   data () {
     return {

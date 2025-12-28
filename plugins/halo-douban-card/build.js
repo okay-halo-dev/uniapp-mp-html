@@ -1,5 +1,5 @@
 /**
- * @description 插件构建文件模板
+ * @description 插件构建文件
  */
 
 module.exports = {

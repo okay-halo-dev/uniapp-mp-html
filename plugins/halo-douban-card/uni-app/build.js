@@ -1,3 +1,3 @@
 module.exports = {
-  template: '豆瓣卡片模板内容 uni-app'
+  template: '<halo-component-name v-if="n.name==\'componentName\'" :class="n.attrs.class" :style="n.attrs.style" :src="n.attrs.src" :n="n" />'
 }

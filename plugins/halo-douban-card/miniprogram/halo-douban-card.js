@@ -45,7 +45,7 @@ Component({
         options: this.data.n.attrs.options
       })
       // this.handleLogProps()
-      this.getDouBanData()
+      this.getData()
     },
     handleLogProps () {
       console.log('-------------- 参数开始 ---------------')
@@ -55,7 +55,7 @@ Component({
       console.log('props options', this.data.options)
       console.log('-------------- 参数结束 ---------------')
     },
-    getDouBanData () {
+    getData () {
       this.setData({
         loadingText: '加载中，请稍等...',
         loading: 'loading',
