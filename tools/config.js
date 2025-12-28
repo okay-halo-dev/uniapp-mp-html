@@ -18,8 +18,8 @@ module.exports = {
     // 'txv-video', // 使用腾讯视频
     // 'img-cache'  // 图片缓存
     'card', // 卡片展示
-    // 'halo-vote-card', // 投票卡片
-    'halo-douban-card' // 豆瓣卡片
+    'halo-douban-card', // 豆瓣卡片
+    'halo-vote-card' // 投票卡片
   ],
 
   /**
