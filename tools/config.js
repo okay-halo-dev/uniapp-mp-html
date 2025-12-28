@@ -17,7 +17,9 @@ module.exports = {
     // 'style',     // 解析 style 标签
     // 'txv-video', // 使用腾讯视频
     // 'img-cache'  // 图片缓存
-    // 'card',      // 卡片展示
+    'card', // 卡片展示
+    // 'halo-vote-card', // 投票卡片
+    'halo-douban-card' // 豆瓣卡片
   ],
 
   /**

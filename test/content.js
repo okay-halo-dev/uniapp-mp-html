@@ -1,8 +1,24 @@
 /**
  * @fileoverview 用于测试的 html 内容
  */
+const haloPostDetailContent = require('./halo-post-detail-content')
+
 module.exports = `<title>富文本示例</title>
+
+<div style="width: 100%;text-align: center">内置卡片</div> 
+<card title="卡片标题1" desc="这是卡片的描述内容，哈哈哈哈1" src="https://blog.xiaoxiaomo.cn/upload/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240321121350.webp" color="white" bgcolor="red" border="green"></card>
 <div>
+    <card title="卡片标题2" desc="这是卡片的描述内容，哈哈哈哈2" src="https://blog.xiaoxiaomo.cn/upload/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240321121350.webp" color="white" bgcolor="red" border="green"></card>
+</div>
+<p style="margin-bottom:2em;">
+    <card title="卡片标题3" desc="这是卡片的描述内容，哈哈哈哈3" src="https://blog.xiaoxiaomo.cn/upload/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240321121350.webp" color="white" bgcolor="red" border="green"></card>
+</p>
+
+<div style="width: 100%;text-align: center">Halo 文章详情</div>
+${haloPostDetailContent}
+
+<div style="width: 100%;text-align: center">默认的测试数据</div>
+<div style="margin-top: 1.5em;“>
   <section style="text-align: center; margin: 0px auto;">
     <section style="border-radius: 4px; border: 1px solid #757576; display: inline-block; padding: 5px 20px;">
       <span style="font-size: 18px; color: #595959;">表格</span>

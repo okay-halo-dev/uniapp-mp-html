@@ -83,7 +83,7 @@ gulp.task('build', gulp.series('clean', packComp))
  * @returns {NodeJS.ReadWriteStream}
  */
 function packDemo () {
-  return gulp.src(['tools/demo/**/*', 'test/content.js'], {
+  return gulp.src(['tools/demo/**/*', 'test/halo-post-detail-content.js', 'test/content.js'], {
     nodir: true
   })
     .pipe(ifdef(platform))
@@ -97,7 +97,7 @@ gulp.task('dev', gulp.series('clean', gulp.parallel(packComp, packDemo)))
  * @description 监听文件变化
  */
 gulp.task('watch-demo', () => {
-  gulp.watch(['tools/demo/**/*', 'test/content.js']).on('all', (type, file) => {
+  gulp.watch(['tools/demo/**/*', 'test/halo-post-detail-content.js', 'test/content.js']).on('all', (type, file) => {
     console.log(type + ':' + file)
     packDemo()
   })

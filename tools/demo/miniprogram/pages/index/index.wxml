@@ -1,3 +1,8 @@
-<mp-html container-style="padding:20px" content="{{html}}" domain="https://mp-html.oss-cn-hangzhou.aliyuncs.com" lazy-load scroll-table selectable use-anchor tag-style="{{tagStyle}}" bindload="load" bindready="ready" bindimgtap="imgtap" bindlinktap="linktap">
-  加载中...
-</mp-html>
+<view>
+    <view style="margin-bottom: 32rpx;width: 100%;text-align: center;">测试内容</view>
+    <mp-html container-style="padding:20px" content="{{html}}" domain="https://blog.xiaoxiaomo.cn" lazy-load
+             scroll-table selectable use-anchor tag-style="{{tagStyle}}" bindload="load" bindready="ready"
+             bindimgtap="imgtap" bindlinktap="linktap">
+        加载中...
+    </mp-html>
+</view>
