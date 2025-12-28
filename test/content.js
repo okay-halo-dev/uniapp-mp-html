@@ -5,14 +5,14 @@ const haloPostDetailContent = require('./halo-post-detail-content')
 
 module.exports = `<title>富文本示例</title>
 
-<div style="width: 100%;text-align: center">内置卡片</div> 
-<card title="卡片标题1" desc="这是卡片的描述内容，哈哈哈哈1" src="https://blog.xiaoxiaomo.cn/upload/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240321121350.webp" color="white" bgcolor="red" border="green"></card>
-<div>
-    <card title="卡片标题2" desc="这是卡片的描述内容，哈哈哈哈2" src="https://blog.xiaoxiaomo.cn/upload/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240321121350.webp" color="white" bgcolor="red" border="green"></card>
-</div>
-<p style="margin-bottom:2em;">
-    <card title="卡片标题3" desc="这是卡片的描述内容，哈哈哈哈3" src="https://blog.xiaoxiaomo.cn/upload/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240321121350.webp" color="white" bgcolor="red" border="green"></card>
-</p>
+<!--<div style="width: 100%;text-align: center">内置卡片</div> -->
+<!--<card title="卡片标题1" desc="这是卡片的描述内容，哈哈哈哈1" src="https://blog.xiaoxiaomo.cn/upload/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240321121350.webp" color="white" bgcolor="red" border="green"></card>-->
+<!--<div>-->
+<!--    <card title="卡片标题2" desc="这是卡片的描述内容，哈哈哈哈2" src="https://blog.xiaoxiaomo.cn/upload/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240321121350.webp" color="white" bgcolor="red" border="green"></card>-->
+<!--</div>-->
+<!--<p style="margin-bottom:2em;">-->
+<!--    <card title="卡片标题3" desc="这是卡片的描述内容，哈哈哈哈3" src="https://blog.xiaoxiaomo.cn/upload/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240321121350.webp" color="white" bgcolor="red" border="green"></card>-->
+<!--</p>-->
 
 <div style="width: 100%;text-align: center">Halo 文章详情</div>
 ${haloPostDetailContent}

@@ -13,7 +13,6 @@
 }
 
 .halo-douban-card.error {
-    padding: 0;
     border-style: dashed;
     border-color: #e88080;
     color: #e88080;
@@ -21,7 +20,6 @@
 }
 
 .halo-douban-card.loading {
-    padding: 0;
     border-style: dashed;
     border-color: rgba(3, 174, 252, 1);
     color: rgba(3, 174, 252, 1);
@@ -29,11 +27,9 @@
 }
 
 .halo-douban-card-error {
-    box-sizing: border-box;
-    padding: 50rpx 24rpx;
-    font-size: 24rpx;
-    border-radius: 12rpx;
+    width: 100%;
     text-align: center;
+    font-size: 24rpx;
 }
 
 .poster {
@@ -59,7 +55,7 @@
 
 .title {
     box-sizing: border-box;
-    font-size: 32rpx;
+    font-size: 30rpx;
     font-weight: bold;
 }
 
@@ -67,7 +63,7 @@
     box-sizing: border-box;
     margin-top: 12rpx;
     line-height: 36rpx;
-    color: rgba(0, 0, 0, 0.85);
+    color: rgba(0, 0, 0, 0.75);
 }
 
 /*徽章*/
@@ -78,19 +74,24 @@
     top: 0;
     font-size: 24rpx;
     padding: 2rpx 12rpx;
-    background-color: #f5c618;
+    /*background-color: #f5c618;*/
     border-radius: 0 6rpx 0 12rpx;
+    background-image: linear-gradient(to right, rgb(255, 152, 0), rgb(255, 110, 0));
+    color: #ffffff;
 }
 
 .stars {
-    font-size: 24rpx;
+    font-size: 32rpx;
+    color: rgb(255, 110, 0);
 }
 
 .score {
-    margin: 0 6rpx;
+    font-size: 28rpx;
+    margin-left: 6rpx;
 }
 
 .tag-list {
+    margin-top: 4rpx;
     gap: 16rpx;
 }
 
@@ -102,7 +103,7 @@
     align-items: center;
     align-content: center;
     box-shadow: 0 0 0 rgb(0 0 0 / 8%);
-    border-radius: 4rpx;
+    border-radius: 8rpx;
     font-size: 22rpx;
 }
 
@@ -123,6 +124,10 @@
     margin-top: 22rpx;
     padding-bottom: 4rpx;
     gap: 0 22rpx;
+}
+
+.btn {
+    font-size: 24rpx !important;
 }
 
 /*  通用 */
@@ -185,4 +190,23 @@
 
 .text-xs {
     font-size: 24rpx;
+}
+
+/* 渐变背景 */
+.bg-gradient-orange {
+    background-image: linear-gradient(to right, rgb(255, 152, 0), rgb(255, 110, 0));
+    color: #ffffff;
+}
+
+.shadow-orange {
+    box-shadow: 0 3px 5px rgb(204 142 51 / 20%);
+}
+
+.bg-gradient-light-blue {
+    background-image: linear-gradient(to right, rgb(3, 174, 252), rgb(3, 216, 252)) !important;
+    color: #fff !important;
+}
+
+.shadow-light-blue {
+    box-shadow: 0 3px 5px rgb(51 156 204 / 20%);
 }

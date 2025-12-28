@@ -30,7 +30,7 @@ Component({
     },
     poster: '',
     posterEmpty: false,
-    stars: []
+    stars: '☆☆☆☆☆☆☆☆☆☆'
   },
   lifetimes: {
     attached () {
@@ -91,10 +91,19 @@ Component({
         },
         success: (res) => {
           if (utils.isSerializableToJSON(res.data)) {
+            const maxStarsCount = 5
+            let starsCount = Math.round(res.data.spec.score / 2)
+
+            if (starsCount > maxStarsCount) {
+              starsCount = maxStarsCount
+            }
+            const scoreStars = new Array(starsCount).fill(0).map((_) => '★')
+            const defaultStars = new Array(maxStarsCount - starsCount).fill(0).map((_) => '☆')
+
             this.setData({
               detail: res.data,
               poster: res.data.spec.poster,
-              stars: new Array(Math.round(res.data.spec.score / 2)).fill(0).map((_) => '⭐')
+              stars: [...scoreStars, ...defaultStars].join('')
             })
             setTimeout(() => {
               this.setData({
@@ -104,14 +113,14 @@ Component({
           } else {
             this.setData({
               loading: 'error',
-              loadingText: '豆瓣内容加载失败，点击重试'
+              loadingText: '豆瓣数据加载失败，点击重试'
             })
           }
         },
         fail: () => {
           this.setData({
             loading: 'error',
-            loadingText: '豆瓣内容加载失败，点击重试'
+            loadingText: '豆瓣数据加载失败，点击重试'
           })
         }
       })

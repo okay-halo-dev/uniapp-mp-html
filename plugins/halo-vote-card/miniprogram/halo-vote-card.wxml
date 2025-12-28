@@ -1,4 +1,5 @@
 <view class="halo-plugin-wrapper halo-plugin-status {{loading}}">
+    <view class="badge">投票</view>
     <view wx:if="{{loading !== 'success'}}" class="halo-plugin-wrapper-error" bind:tap="getData">
         {{ loadingText }}
     </view>
@@ -6,9 +7,9 @@
         <view class="vote-card-head flex flex-col">
             <view class="flex justify-between">
                 <view class="flex items-center uh-gap-8">
-                    <view class="tag orange round-24 text-xs" style="min-width:40rpx;">ID: {{ voteId }}</view>
-                    <view class="tag light-blue round-24 text-xs">{{ vote.spec._uh_type }}</view>
-                    <view class="tag round-24 text-xs {{vote.spec._uh_state.color}}">{{vote.spec._uh_state.state}}</view>
+                    <view class="tag-badge orange round-4 text-xs">ID: {{ voteId }}</view>
+                    <view class="tag-badge light-blue round-4 text-xs">{{ vote.spec._uh_type }}</view>
+                    <view class="tag-badge round-4 text-xs {{vote.spec._uh_state.color}}">{{vote.spec._uh_state.state}}</view>
                 </view>
                 <view class="flex-shrink">
                     <button wx:if="{{false}}" class="btn light-blue" type="primary"
@@ -18,7 +19,7 @@
                     </button>
                 </view>
             </view>
-            <view class="title">  {{ vote.spec.title }} </view>
+            <view class="title"> 主题： {{ vote.spec.title }} </view>
         </view>
         <view class="vote-card-body">
             <view wx:if="{{vote.spec.remark}}" class="remark text-xs">
@@ -124,10 +125,10 @@
         </view>
         <view class="vote-card-foot flex flex-between">
             <view class="left flex">
-                <view wx:if="{{vote.spec.timeLimit==='permanent'}}" class="tag grey-darken-2 text-xs round-24">
+                <view wx:if="{{vote.spec.timeLimit==='permanent'}}" class="tag grey-darken-2 text-xs round-4">
                     结束：永久有效
                 </view>
-                <view wx:else class="tag grey-darken-2 text-xs round-24">
+                <view wx:else class="tag grey-darken-2 text-xs round-4">
                     <block wx:if="{{vote.spec._state==='未开始'}}">
                         开始：{{  vote.spec._startDateForamtter  }}
                     </block>
@@ -136,29 +137,29 @@
             </view>
 
             <view class="right flex flex-end uh-gap-4">
-                <view class="tag grey-darken-2 text-xs round-24">{{ vote.stats.voteCount }}
+                <view class="tag grey-darken-2 text-xs round-4">{{ vote.stats.voteCount }}
                     人已参与
                 </view>
-                <view wx:if="{{vote.spec.isVoted}}" class="tag grey-darken-2 text-xs round-24">已投票</view>
+                <view wx:if="{{vote.spec.isVoted}}" class="tag grey-darken-2 text-xs round-4">已投票</view>
             </view>
         </view>
 
         <view wx:if="{{submitForm.voteData.length!==0 && !vote.spec.isVoted}}"
               class="box-border uh-mt-12 w-full uh-px-2">
-            <button wx:if="{{vote.spec._uh_state.state==='未开始'}}" type="primary" class="w-full"
+            <button wx:if="{{vote.spec._uh_state.state==='未开始'}}" type="primary" class="w-full btn"
                     bind:tap="handleSubmitTip" data-tip="投票未开始">投票未开始
             </button>
             <button wx:elif="{{vote.spec._uh_state.state==='已结束'}}" type="primary"
-                    class="w-full"
+                    class="w-full btn"
                     bind:tap="handleSubmitTip" data-tip="投票已结束">投票已结束
             </button>
-            <button wx:elif="{{!vote.spec.canAnonymously}}" type="primary" class="w-full"
+            <button wx:elif="{{!vote.spec.canAnonymously}}" type="primary" class="w-full btn"
                     bind:tap="handleSubmit">不支持匿名投票
             </button>
-            <button wx:elif="{{submitForm.voteData.length===0}}" type="primary" class="w-full"
+            <button wx:elif="{{submitForm.voteData.length===0}}" type="primary" class="w-full btn"
                     bind:tap="handleSubmitTip" data-tip="请选择选项">提交投票（请选择选项）
             </button>
-            <button wx:else type="primary" class="w-full" loading="{{submitLoading}}"
+            <button wx:else type="primary" class="w-full btn" loading="{{submitLoading}}"
                     disabled="{{submitLoading}}" bind:tap="handleSubmit">提交投票
             </button>
         </view>

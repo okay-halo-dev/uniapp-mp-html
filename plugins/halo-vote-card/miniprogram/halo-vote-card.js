@@ -103,7 +103,7 @@ Component({
           } else {
             this.setData({
               loading: 'error',
-              loadingText: '数据加载失败，点击重试'
+              loadingText: '投票数据加载失败，点击重试'
             })
           }
         })
@@ -111,7 +111,7 @@ Component({
           console.error('请求失败', err)
           this.setData({
             loading: 'error',
-            loadingText: '数据加载失败，点击重试'
+            loadingText: '投票数据加载失败，点击重试'
           })
         })
     },
@@ -196,7 +196,6 @@ Component({
 
     handleSelectSingleOption (e) {
       const { option } = e.target.dataset
-      console.log('单选', option)
       if (this.data.vote.spec._uh_state.state === '未开始') {
         this.showToast('投票未开始')
         return
